@@ -1,0 +1,115 @@
+body {
+    font-family: Georgia, Garamond, Arial;
+    /* border: 5px solid purple; */
+    margin: 0px;
+}
+
+a {
+    color:#3e9c35;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    background-color: gainsboro;
+}
+
+/* Now, style my CSS classes */
+.my-container-outer {
+    /* border: 3px dashed yellow; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.my-container-row {
+    /* border: 3px solid red; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-item {
+    /* border: 3px dotted green; */
+    /* Expand by 1 / Shrink by 1 / Original size is 300px */
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.hero {
+    padding: 50px 10px;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.center-text {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.my-item h3 {
+    color: black;
+}
+
+.my-item-center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.my-item-center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.carousel-inner>.active {
+    height: 800px;
+}
+
+.movie-section {
+    padding: 100px;
+    background-color: black;
+}
+
+.card-body h5{
+    color: blue;
+}
+
+/* IDs */
+#hero-catalog {
+    background: url('photos/stranger-things.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#headline-title-container{
+    padding: 30px 30px 30px 40px;
+    max-width: 300px;
+    text-align: right;
+    margin-left: auto;
+    height: 300px;
+}
+
+#hero-description {
+    max-width: 400px;
+}
+
+#movie-section-header {
+    padding: 50px;
+    color: white;
+}

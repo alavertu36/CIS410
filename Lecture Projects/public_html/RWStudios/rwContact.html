@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="online movie rental and streaming services" />
+  <meta name="keywords" content="movies, cinema" />
+  <meta name="author" content="Laurel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+
+  <link href="rwStyles.css" rel="stylesheet" />
+  <style>
+    label, legend {
+        color: white;
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- MENU HEADER SECTION -->
+  <header>
+    <a id="logo-container" href="rwIndex.html">
+      <img src="photos/rwStudiosLogo.png" alt="Rockwell Studios logo" />
+      <h2>Rockwell Studios</h2>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="rwIndex.html">Home</a></li>
+        <li><a href="rwCatalog.html">Catalog</a></li>
+        <li><a href="rwBlog.html">Blog</a></li>
+        <a href="rwIndex.html"><button>Sign In</button></a>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="my-container-outer hero" id="hero-home"
+    style="padding:100px 20px; background: linear-gradient(to top right, rgba(27, 94, 32, 0.9), rgba(26, 35, 126, 0.9)), url('photos/pride-prejudice.jpg');background-size:cover;">
+    <div class="my-container-row">
+      <div class="my-item">
+        <div id="headline-title-container">
+          <h1>
+            Contact Us
+          </h1>
+        </div>
+      </div>
+      <div class="my-item my-item-center-horizontal" style="padding:20px">
+        <!-- CONTACT US FORM -->
+        <!-- text fields -->
+        <form syle = "width: 300px" action = "https://submissionsite.com" id = "frmContact" name = "contact" method = "get">
+            <label for = "txtName">First Name</label>
+            <input type = "text" id = "txtName" name = "fName" pattern = "[a-zA-z]*" title = "Only alpha characters please"
+            required = "true" autofocus = "true">
+            <br>
+            <label for = "telPhone">Telephone</label>
+            <input type = "tel" id = "telPhone" name = "phone" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title = "Your phone must be formatted 000-000-0000" placeholder = "123-456-7890" required>
+            <br>
+            <label for = "age">Age</label>
+            <input type = "number" id = "numAge" name = "age" min = "18" max = "150">
+            <br>
+            <label for = "datBirthday">Birthday</label>
+            <input type = "date" id = "datBirthday" name = "birthday">
+            <br>
+            <label for = "selState">State</label>
+            <!-- drop down menu -->
+            <select id = "selState">
+                <option value = ""></option>
+                <option value = "CA">California</option>
+                <option value = "CO">Colorado</option>
+                <option value = "WA">Washington</option>
+            </select>
+            <br><br>
+            <!-- radio buttons -->
+            <label>Best time to contat you:</label>
+            <br>
+            <input type = "checkbox" id = "chkMorning" name = "bestTime" value = "morning">
+            <label for = "chkMorning">Morning</label>
+            <br>
+            <input type = "checkbox" id = "chkAfternoon" name = "bestTime" value = "afternoon">
+            <label for = "chkAfternoon">Afternoon</label>
+            <br>
+            <input type = "checkbox" id = "chkEvening" name = "bestTime" value = "evening">
+            <label for = "chkEvening">Evening</label>
+            <br>
+            <!-- radio buttons in a field set -->
+            <fieldset>
+                <legend>I am a(n):</legend>
+                <input type = "radio" id = "radActor" name = "visitorType">
+                <label for = "radActor">Actor</label>
+                <br>
+                <input type = "radio" id = "radDirector" name = "visitorType">
+                <label for = "radio">Director</label>
+                <br>
+                <input type = "radio" id = "radProducer" name = "visitorType">
+                <label for = "radio">Producer</label>
+            </fieldset>
+            <br>
+            <!-- textArea for things like messages -->
+            <label for = "txtarMessage">Message</label>
+            <textArea id = "txtarMessage" style = "width: 100%" rows = "10"></textArea>
+            <input type = "submit" value = "Send" class = "my-button">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <a href="rwAbout.html">About</a></li>
+    <a href="rwContact.html">Contact</a></li>
+    <a href="#">Careers</a></li>
+    <hr />
+    <div>Developed by CIS410 &copy; 2020</div>
+  </footer>
+
+</body>
+
+</html>

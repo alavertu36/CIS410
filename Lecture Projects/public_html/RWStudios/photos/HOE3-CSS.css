@@ -1,0 +1,265 @@
+/*Week 2.1 - Tues 9/1/2020  - CSS - Basics, Layout*/
+
+/* 12. precedence */
+/* .purple{
+  color: purple
+} */
+
+/* h3{
+  color: yellow;
+} */
+
+/* 1. start */
+body {
+  font-family: Georgia, Garamond, Arial;
+  /* border: 5px solid purple; */
+  margin: 0px;
+}
+
+a {
+  color: #3e9c35;
+  text-decoration: none;
+}
+
+h1 {
+  color: #1a237e;
+}
+
+/* 4. show dev tools */
+.my-container-outer {
+  /* border: 3px dashed yellow; */
+
+  /* 7. horizontally center contents */
+  display: flex;
+  justify-content: center;
+  /* go to 8 */
+
+  /* 11 color: pink */
+
+  /* HOE 2: Add the following style declaration to the my-container-outer class */
+  /* 1. set the flex direction to column, this will stack the "Other Products & Services" at the top of the container     */
+  flex-direction: column;
+  /* 2. once the flex direction is changed to column, the axes of reference are reversed, So to center items horiztonally now, add a declaration to center align the items  */
+  align-items: center;
+}
+
+.my-container-row {
+  /* border: 3px solid red; */
+
+  /* 5. box model */
+  padding: 20px;
+  max-width: 1100px;
+
+  /* 6. flexbox */
+  display: flex;
+
+  /* needed for mobile, show mobile */
+  flex-wrap: wrap;
+
+  justify-content: center;
+  /* go up to 7 */
+}
+
+.my-item {
+  /* border: 3px dotted green; */
+  padding: 20px;
+
+  /* 8. leap of faith */
+  flex: 1 1 300px;
+
+  /* 9. apply same classes to other sections */
+}
+
+.hero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 45px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+#hero-home {
+  background: linear-gradient(
+      to bottom right,
+      rgba(27, 94, 32, 0.9),
+      rgba(26, 35, 126, 0.9)
+    ),
+    url("photos/Parasite.jpg");
+  color: white;
+  /* 10. show how ID takes precendence over class and body element in terms of color, even move this up the document */
+
+  /* 11. show Chrome Dev tools */
+
+  /* go up and do demo 12*/
+}
+
+#hero-home h1 {
+  color: white;
+}
+
+#headline-title-container {
+  box-shadow: 0 0px 30px 0 rgb(0, 0, 0, 0.3);
+  padding: 30px 30px 30px 40px;
+  max-width: 300px;
+  text-align: right;
+}
+
+#hero-description {
+  max-width: 400px;
+}
+
+.my-item-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.my-item-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+/* HOE 2. CATALOG STYLES*/
+
+/* Create a style rule for the element with the id of hero-catalog and 1. set the background to the stranger-things.jpg image in the photos folder, 2. size the background so the image covers the whole background and does not repeat, and 3.) set the text to white */
+#hero-catalog {
+  background: url("./photos/stranger-things.jpg");
+  background-size: cover;
+  color: white;
+}
+
+/* Find a way to style the "Catalog" heading to white */
+#hero-catalog h1 {
+  color: white;
+}
+
+/* go to update style on .my-container-outer */
+
+/* Create a style rule for classes that are named center-text 1. align the text in the center.  Also pad the contents at 60px 30px  2. add this class to the appropriate <div> element so that the text in the "Shop," "School" and "Theme Parks" sections are centered*/
+.center-text {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+/*WEEK 2.2 - Thur 9/3/2020  - CSS - Styling */
+/* 1. in-line style photo */
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+#random-quote-container {
+  background: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("./photos/rivendell-lotr.jpg");
+  /* filter: grayscale(100%); */
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+#random-quote-text {
+  margin: 40px 0px 20px 0px;
+  font-size: 35px;
+  line-height: 1.5em;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  background-color: gainsboro;
+}
+
+footer a {
+  color: #1b5e20;
+  font-size: 1.3em;
+  margin: 0px 5px;
+}
+
+hr {
+  border-color: gray;
+}
+
+button {
+  background-color: #ffb300;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* HEADER */
+
+header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header li {
+  margin: 5px;
+  font-size: 18px;
+}
+
+#logo-container,
+nav {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+
+nav ul a:hover {
+  font-weight: bold;
+}
+
+/* HOE3. BLOG STYLES*/
+/* Create a style rule for the element with the id of hero-blog and 1. set the background iamge to the power-rangers.jpg image in the photos folder, 2.) set the background color white with an opacity of .85, and 3. set the background blend mode to lighten  */
+#hero-blog {
+  background-image: url("./power_rangers.jpg");
+  background-color: rgba(255, 255, 255, 0.85);
+  background-blend-mode: lighten;
+}
+/* Create a style for all h5 elements to have a color of #1a237e */
+h5 {
+  color: #1a237e;
+}
+/* Add a style to set the margin to 30px at the top and bottom on elements with a class name of side-article */
+.side-article {
+  margin: 30px 0px;
+}
+
+/* Apply a margin of 10px 0px to all h5, h3, and p elements that are nestled inside of elements with a class name of side-article.  Tip: you can apply styles to multiple elements by separating them with commas: https://www.w3schools.com/cssref/sel_element_comma.asp.  */
+.side-article h5,
+h3,
+p {
+  margin: 10px 0px;
+}
+
+.button-chat {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #1b5e20;
+}

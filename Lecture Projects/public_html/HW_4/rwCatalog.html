@@ -1,0 +1,262 @@
+<!-- https://cisweb.biz.colostate.edu/CIS410/FA23Lavertu/HW_4/rwCatalog.html -->
+<!DOCTYPE html>
+<html>
+
+<!-- HEADER SECTION -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="online movie rental and streaming services" />
+    <meta name="keywords" content="movies, cinema" />
+    <meta name="author" content="CIS410" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Catalog</title>
+</head>
+
+<!-- NAVIGATION BAR SECTION -->
+<body class="body-bootstrap">
+    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./photos/rwStudiosLogo.png" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Rockwell Studios
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../RWStudios/rwIndex.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="rwCatalog.html">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../RWStudios/rwBlog.html">Blog</a>
+                    </li>
+                    <a href="#"><button class="btn btn-warning text-light text-uppercase">Sign
+                            In</button></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BANNER HERO SECTION -->
+    <div class="my-container-outer hero" id="hero-catalog">
+        <div class="my-container-row">
+            <!-- left side container -->
+            <div class="my-item my-item-center-horizontal">
+                <div id="headline-title-container">
+                    <h1 style="color: white;">Catalog</h1>
+                </div>
+            </div>
+            <!-- right side container -->
+            <div class="my-item my-item-center-horizontal my-item-center-vertical">
+                <div id="hero-description">
+                    <p>
+                        A comprehensive collection of classics over the years.
+                    </p>
+                    <a href="rwCatalog.html"><button class="btn btn-warning text-light text-uppercase">Free
+                            Trial</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="movie-section">
+        <!-- CAROUSEL SECTION -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./photos/joker.jpg" class="d-block w-100" alt="The Dark Knight">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>The Dark Knight</h5>
+                        <p>A gripping and intense superhero film that explores the thin line between justice and chaos
+                            as
+                            Batman confronts the anarchic Joker.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./photos/spiderman.jpg" class="d-block w-100" alt="The Amazing Spider-Man">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>The Amazing Spider-Man</h5>
+                        <p>A reboot of the Spider-Man franchise that follows Peter Parker's journey as he grapples with
+                            newfound powers, uncovers family secrets, and faces off against the formidable Lizard.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./photos/fightclub.jpg" class="d-block w-100" alt="Fight Club">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Fight Club</h5>
+                        <p>A disenchanted white-collar worker forms an underground fight club with a charismatic soap
+                            salesman, leading to a surreal exploration of modern masculinity and societal discontent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- CARD SECTION -->
+        <div id="movie-section-header">
+            <h1>Trending Movies Today</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-8">
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/theCreator.jpg" class="card-img-top" alt="The Creator">
+                    <div class="card-body">
+                        <h5 class="card-title">The Creator</h5>
+                        <p class="card-text">The creator is an imaginative and resourceful individual who combines
+                            curiosity with creativity to explore new possibilities and bring ideas to life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/reptile.jpg" class="card-img-top" alt="Reptile">
+                    <div class="card-body">
+                        <h5 class="card-title">Reptile</h5>
+                        <p class="card-text">Reptile is a thrilling film that follows the gripping journey of a
+                            herpetologist who discovers a mysterious and dangerous ancient reptilian creature,
+                            unleashing a series of suspenseful events.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/noOneWillSaveYou.jpg" class="card-img-top" alt="No One Will Save You">
+                    <div class="card-body">
+                        <h5 class="card-title">No One Will Save You</h5>
+                        <p class="card-text">No One Will Save You is a gripping cinematic experience that explores the
+                            chilling consequences when a group of friends, trapped in a remote location, must confront
+                            their darkest secrets and fight for survival against an unknown and relentless threat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/dumbMoney.jpg" class="card-img-top" alt="Dumb Money">
+                    <div class="card-body">
+                        <h5 class="card-title">Dumb Money</h5>
+                        <p class="card-text">Dumb Money humorously navigates the world of amateur investors and
+                            financial misadventures as a group of friends embarks on a wild journey of day trading,
+                            revealing the unpredictable rollercoaster of the stock market.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/blueBeetle.jpg" class="card-img-top" alt="Blue Beetle">
+                    <div class="card-body">
+                        <h5 class="card-title">Blue Beetle</h5>
+                        <p class="card-text">Blue Beetle follows the exhilarating journey of a teenager who discovers a
+                            mysterious scarab that grants him superpowers, leading him to embrace his destiny as the
+                            iconic superhero while navigating the challenges of heroism and self-discovery.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/millionMilesAway.jpg" class="card-img-top" alt="A Million Miles Away">
+                    <div class="card-body">
+                        <h5 class="card-title">A Million Miles Away</h5>
+                        <p class="card-text">A Million Miles Away weaves a poignant narrative about love and redemption
+                            as two estranged souls, separated by circumstance, embark on separate journeys only to
+                            discover that emotional distances can be as challenging to overcome as physical ones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/barbie.jpg" class="card-img-top" alt="Barbie">
+                    <div class="card-body">
+                        <h5 class="card-title">Barbie</h5>
+                        <p class="card-text">In a Barbie movie, join the iconic doll on a dazzling adventure filled with
+                            friendship, fashion, and fun, as she learns important life lessons and embraces her unique
+                            qualities in a whimsical world of imagination.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./photos/nowhere.jpg" class="card-img-top" alt="Nowhere">
+                    <div class="card-body">
+                        <h5 class="card-title">Nowhere</h5>
+                        <p class="card-text">Nowhere explores the surreal and chaotic lives of a group of Los Angeles
+                            teenagers navigating love, identity, and existential angst in a vivid and unpredictable
+                            journey through a day in their unconventional lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT SECTION -->
+    <div class="my-content-outer">
+        <!-- 1st row -->
+        <div class="my-container-row">
+            <h2>Other Products & Services</h2>
+        </div>
+        <!-- 2nd row -->
+        <div class="my-container-row">
+            <!-- 1st column -->
+            <div class="my-item center-text">
+                <h3>Shop</h3>
+                <p>
+                    Souvenirs from your favorite productions.
+                </p>
+            </div>
+            <!-- 2nd column -->
+            <div class="my-item center-text">
+                <h3>School</h3>
+                <p>
+                    Invest in your career in films with training from the world's renowned experts.
+                </p>
+            </div>
+            <!-- 3rd column -->
+            <div class="my-item center-text">
+                <h3>Theme Parks</h3>
+                <p>
+                    A complete vacation package for the family.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="../RWStudios/bootstrap/rwAbout.html">About</a></li>
+        <a href="../RWStudios/rwContact.html">Contact</a></li>
+        <a href="#">Careers</a></li>
+        <hr />
+        <div>Developed by Alexander Lavertu | CIS410 &copy; 2020</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+</html>

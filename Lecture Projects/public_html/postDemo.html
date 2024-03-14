@@ -1,0 +1,63 @@
+<!--https://cisweb.biz.colostate.edu/CIS410/FA23Lavertu/postDemo.html-->
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Post DEMO</title>
+        <meta charset = 'utf-8'>
+    </head>
+    <body>
+        <!-- firstname, lastname, gender, age -->
+        <label for = 'txtFName'>FirstName</label>
+        <input type = 'text' id = 'txtFName'>
+
+        <label for = 'txtLName'>LastName</label>
+        <input type = 'text' id = 'txtLName'>
+
+        <label for = 'numAge'>Age</label>
+        <input type = 'number' id = 'numAge'>
+
+        <label for = 'selGender'>Gender</label>
+        <select id = 'selGender'>
+            <option value = 'M'>M</option>
+            <option value = 'F'>F</option>
+        </select>
+        <br><br>
+        <input type = 'button' value = 'Submit' onclick = 'processData()'>
+
+        <script>
+            function processData() {
+                //steps of the function:
+                    //extract values from the form
+                    //build an object from those values
+                    //call fetch to make a post call sending the object
+
+                //extract values from the form
+                let fName, lName, frmGneder, frmAge;
+                fName = document.getElementById('txtFName').value;
+                lName = document.getElementById('txtLName').value;
+                frmAge = document.getElementById('numAge').value;
+                frmGender = document.getElementById('selGender').value;
+
+                //now build the object from those values
+                const myData = {
+                    firstName: fName,
+                    lastName: lName,
+                    age: frmAge,
+                    gender: frmGender
+                };
+                //optional conosle logs go here
+                fetch('https://cisweb.biz.colostate.edu/cis410/FA23Kinnett/node_test/actor/', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(myData)
+                })
+                .then((theResponse) => {
+                    return theResponse.json();
+                })
+                .then((jsonResp) => {
+                    console.log(jsonResp);
+                });
+            }
+        </script>
+    </body>
+</html>

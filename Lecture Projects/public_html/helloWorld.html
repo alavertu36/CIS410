@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Hello World!</title>
+    <meta charset = "utf-8">
+    <!-- this is a comment -->
+</head>
+<body>
+<h1>Hello World!</h1>
+<p>Interest of mine include:</p>
+<ul>
+    <li>Lacrosse</li>
+    <li>Traveling</li>
+    <li>Video Games</li>
+    <li>Hockey</li>
+    <li>Movies</li>
+    <li>Haning out with friends</li>
+</ul>
+My favoirte movies are -- in this order:
+<ol>
+    <li>Step brothers</li>
+    <li>Django</li>
+    <li>The Wolf of Wallstreet</li>
+</ol>
+<a href = "https://www.reddit.com" target ="_blank">Reddit</a>
+<br><br>
+<div id = "output">
+    Output goes here.
+</div>
+<br>
+<input type = "button" value = "Run my code" onclick = "runCode()">    
+<script>
+    function runCode() {
+        let myName = "Alex";
+        console.log("Hello World!");
+        console.log(myName);
+
+        const cars = ["Alex", "Seth", "John"];
+        console.log(cars);
+        cars.pop();
+        console.log(cars);
+        cars.push("Sammy");
+        console.log(cars);
+
+
+        document.getElementById("output").innerHTML = "<h1>I have the POWER!!!!</h1>";
+        // let myNum = 100;
+        myNum = prompt("Enter a number");
+        if(myNum % 2 === 0) {
+            console.log(myNum + " is an even number");
+        }
+        else {
+            console.log(myNum + " is an odd number");
+        }
+
+        // alert("Hello World");
+        // alert(4 + 5);
+        // let myInt = 10;
+        // let myName = "Alex";
+        // let yourName = "Seth";
+        // let myDouble = 3.14;
+        // var myVar = "Alex";
+    }
+</script>
+</body>
+</html>

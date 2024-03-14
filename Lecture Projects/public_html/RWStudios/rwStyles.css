@@ -1,0 +1,158 @@
+h1 {
+    color:#1a237e;
+}
+
+h3 {
+    color: gray;
+}
+
+h5 {
+    color: #1a237e;
+}
+
+body {
+    font-family: Georgia, Garamond, Arial;
+    /* border: 5px solid purple; */
+    margin: 0px;
+}
+
+a {
+    color:#3e9c35;
+    text-decoration: none;
+}
+
+/* Now, style my CSS classes */
+.my-container-outer {
+    /* border: 3px dashed yellow; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.my-container-row {
+    /* border: 3px solid red; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-item {
+    /* border: 3px dotted green; */
+    /* Expand by 1 / Shrink by 1 / Original size is 300px */
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.hero {
+    padding: 50px 10px;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.center-text {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.my-item h3 {
+    color: black;
+}
+
+.my-item-center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.my-item-center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.side-article {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    h5, h3, p {
+        margin: 10px 0px;
+    }
+}
+
+.button-chat {
+    position: absolute;
+    background: #1b5e20;
+    right: 10px;
+    color: white;
+}
+
+/* tables */
+
+.my-container-row th {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.my-container-row td {
+    padding: 5px;
+    border: 1px solid white;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+th,td {
+    max-width: 150;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    background-color: gainsboro;
+}
+
+/* to style IDs instead of classes, use # instead of . */
+#hero-home {
+    background: linear-gradient(to top right, rgba(27, 94, 32, 0.9), rgba(26, 35, 126, 0.9)), 
+    url('photos/Parasite.jpg');
+}
+/* This one could be a problem might have to do in line styling */
+#hero-home h1 {
+    color: white;
+}
+
+#hero-catalog {
+    background: url('photos/stranger-things.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#headline-title-container{
+    box-shadow: 0px 0px 30px rgba(0,0,.3);
+    padding: 30px 30px 30px 40px;
+    max-width: 300px;
+    text-align: right;
+    margin-left: auto;
+}
+
+#hero-description {
+    max-width: 400px;
+}
+
+#hero-blog {
+    background: url('photos/power_rangers.jpg');
+    background-color: rgba(255, 255, 255, .85);
+    background-blend-mode: lighten;
+}
+
+#headline-title-container-blog h1 {
+    color: #1a237e;
+}

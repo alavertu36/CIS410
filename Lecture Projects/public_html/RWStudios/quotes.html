@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="online movie rental and streaming services" />
+  <meta name="keywords" content="movies, cinema" />
+  <meta name="author" content="CIS410" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotes</title>
+  <style>
+    table,
+    td,
+    tr,
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 3px
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Quotes</h3>
+  <div id="app">
+
+  </div>
+
+<script>
+    let myQuotes;
+    console.log("start the-clock");
+    fetch('https://cisweb.biz.colostate.edu/cis410/FA23Kinnett/node_test/quotes/')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(jsonResponse) {
+            console.log(jsonResponse);
+            document.getElementById("app").innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PK</th>
+                            <th>Quote</th>
+                            <th>Movie</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "quotes-body">
+                `;
+            jsonResponse.forEach(thisQuote=>{
+                document.getElementById("quotes-body").innerHTML += `
+                    <tr>
+                        <td>${thisQuote.quotePK}</td>
+                        <td>${thisQuote.quote}</td>
+                        <td>${thisQuote.movie}<td>
+                    </tr>
+                `;
+            });
+            document.getElementById("quotes-body").innerHTML += "</tbody></table>"; 
+        })
+        .catch(myError => {
+            console.log("Something went wrong", myError);
+            document.getElementById("app").innerHTML = "Sorry this page is unavailable.";
+        });
+
+        console.log("End");
+</script>
+
+</body>
+
+</html>
+
+<!-- Use this link or using API's. It has the fully qualified domain name -->
+<!-- https://cisweb.biz.colostate.edu/CIS410/FA23Lavertu/RWStudios/quotes.html -->

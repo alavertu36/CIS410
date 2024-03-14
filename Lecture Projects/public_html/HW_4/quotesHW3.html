@@ -1,0 +1,49 @@
+<!-- https://cisweb.biz.colostate.edu/CIS410/FA23Lavertu/HW_4/quotesHW3.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="online movie rental and streaming services" />
+        <meta name="keywords" content="movies, cinema" />
+        <meta name="author" content="CIS410 - Alexander Lavertu" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quotes</title>
+        </head>
+      </head>
+      <body>
+        <h3>Quote</h3>
+        <div id="chat-window-quote" style="width: 400px; min-height:180px; padding:10px; background-color: white; position: fixed;">
+        <textarea name="message" id="content-quote" rows="4" style="width:100%;margin:5px 0px"></textarea>
+        <h3>Movie</h3>
+        <textarea name="message" id="content-movie" rows="4" style="width:100%;margin:5px 0px"></textarea>
+        <button id="submit-chat" style="float:left">Submit</button>
+        <br>
+        <div id = "chat-log"></div>
+
+<script>
+    function chatClicked() {
+      document.getElementById("chat-window-quote").style.display = "inline";
+    }
+  
+    document.getElementById("submit-chat").addEventListener("click", processSendChat);
+  
+    function processSendChat() {
+      if ((document.getElementById("content-quote").value !== "") || (doucment.getElementById("content-movie").value !== " "))  {
+        let message = document.getElementById("content-quote").value; 
+        let myParagraph = document.createElement("p");
+        myParagraph.style = "border: 1px solid black;"
+        let message1 = document.getElementById("content-movie").value;
+        myParagraph.innerHTML = "Quote:" + '"' + message + '"' + "Movie: " + message1;
+
+        //append to the chat-log
+        document.getElementById("chat-log").prepend(myParagraph);
+        document.getElementById("content-quote").value = ""; //clear out the chat box
+        document.getElementById("content-movie").value = ""; //clear out the chat box
+        document.getElementById("content-quote").focus(); //reset the focus (cursor so that it goes back to text box after submission)
+      } //end if
+    } //end function
+    
+  </script>
+  </body>
+  </html>
+

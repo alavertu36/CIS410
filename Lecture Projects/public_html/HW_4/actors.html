@@ -1,0 +1,65 @@
+<!-- Use this link when using API's. It has the fully qualified domain name -->
+<!-- https://cisweb.biz.colostate.edu/CIS410/FA23Lavertu/HW_4/actors.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Actor names" />
+  <meta name="keywords" content="movies, cinema, actors" />
+  <meta name="author" content="CIS410 - Alexander Lavertu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actor's Names</title>
+  <style>
+    table,
+    td,
+    tr,
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 3px
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Actors</h3>
+  <div id="app">
+
+  </div>
+
+<script>
+    let myNames;
+    console.log("start the-clock");
+    fetch('https://cisweb.biz.colostate.edu/cis410/FA23Kinnett/node_test/actors/')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(jsonResponse) {
+            console.log(jsonResponse);
+            document.getElementById("app").innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>actorPK</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "names-body">
+                `;
+            jsonResponse.forEach(thisQuote=>{
+                document.getElementById("names-body").innerHTML += `
+                    <tr>
+                        <td>${thisQuote.actorPK}</td>
+                        <td>${thisQuote.name}</td>
+                    </tr>
+                `;
+            });
+            document.getElementById("names-body").innerHTML += "</tbody></table>"; 
+        })
+        .catch(myError => {
+            console.log("Something went wrong", myError);
+            document.getElementById("app").innerHTML = "Sorry this page is unavailable.";
+        });
+</script>
+</body>
+</html>

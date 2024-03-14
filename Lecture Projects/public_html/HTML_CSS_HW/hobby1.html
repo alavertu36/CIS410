@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang = "en">
+<!-- HEADER SECTION -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My favorite hobbies" />
+        <meta name="keywords" content="Fitness VideoGames" />
+        <meta name="author" content="Alexander Lavertu - CIS410" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <!--This is how to import both bootstrap and our own sheet  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <link href="styles.css" rel="stylesheet" />
+        <style>
+            label {
+                color: white;
+            }
+        </style>
+    </head>
+
+<!-- NAVIGATION SECTION -->
+<body>
+  <body class="body-bootstrap">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="photos/main-logo.png" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                AlexLavertu.com
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="hobby1.html">Hockey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="hobby2.html">Lacrosse</a>
+                    </li>
+                    <a href="hobby1.html"><button class="btn btn-warning text-light text-uppercase">Sign
+                            In</button></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- BANNER SECTION -->
+  <div class = "my-container-outer hero" id = "hero-hobby-1">
+    <div class = "my-container-row">
+      <!-- left side container -->
+      <div class = "my-item my-item-center-horizontal">
+        <div id = "headline-title-container">
+          <h1>Hobby 1: Hockey</h1>
+        </div>
+      </div>
+      <!-- right side container -->
+      <div class = "my-item my-item-center-horizontal my-item-center-vertical">
+        <div id = "hero-description">
+          <h2>This is probably my favorite hobby!</h2>
+          <p>See the table for 2022 - 2023 NHL stat leaders.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <!-- CONTENT SECTION -->
+  <div class="row">
+    <div class="col">
+        <h5 class="text-center">NHL Stat Leaders</h5>
+        <h3 class="text-center">2022 - 2023</h3>
+    </div>
+</div>
+<div class = "my-container-outer">
+    <div class = "my-container-row">
+        <div class = "my-item">
+            <table class = "table table-dark table-striped center-text">
+                <!-- build out table to specifications -->
+                <thead>
+                    <tr>
+                        <th>Skater</th>
+                        <th>Goals</th>
+                        <th>Assists</th>
+                        <th>Points</th>
+                        <th>Games Played</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Connor McDavid</td>
+                        <td>64</td>
+                        <td>89</td>
+                        <td>153</td>
+                        <td>82</td>
+                        <td>Edmonton Oilers</td>
+                    </tr>
+                    <tr>
+                        <td>Leon Draisaitl</td>
+                        <td>52</td>
+                        <td>76</td>
+                        <td>128</td>
+                        <td>80</td>
+                        <td>Edmonton Oilers</td>
+                    </tr>
+                    <tr>
+                        <td>David Pastrnak</td>
+                        <td>61</td>
+                        <td>52</td>
+                        <td>113</td>
+                        <td>82</td>
+                        <td>Boston Bruins</td>
+                    </tr>
+                    <tr>
+                        <td>Nikita Kucherov</td>
+                        <td>30</td>
+                        <td>83</td>
+                        <td>113</td>
+                        <td>82</td>
+                        <td>Tampa Bay Lightning</td>
+                    </tr>
+                    <tr>
+                      <td>Nathan MacKinnon</td>
+                      <td>42</td>
+                      <td>69</td>
+                      <td>111</td>
+                      <td>71</td>
+                      <td>Colorado Avalanche</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+  
+  <!-- FOOTER -->
+  <footer>
+    <div>Developed by Alexander Lavertu | CIS410 &copy; 2020</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+</html>

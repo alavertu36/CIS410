@@ -1,0 +1,112 @@
+<!-- https://cisweb.biz.colostate.edu/CIS410/FA23Lavertu/quotesVue.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container" style="padding: 30px" id="app">
+        <p>Hi {{theName}}</p>
+        <p>{{printGreeting()}}</p>
+        <div class="row justify-content-center" style="margin: 30px">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="quote-input">Quote</label>
+                    <textarea class="form-control" id="quote-input" rows="3" v-model="quoteInput"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="movie-input">Movie</label>
+                    <input type="text" class="form-control" id="movie-input" v-model="movieInput" />
+                </div>
+                <p>Current Quote: {{quoteInput}}</p>
+                <p>Current Movie: {{movieInput}}</p>
+                <button class="btn btn-primary" v-on:click="addMovieQuote">Submit</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-6">
+                <div id="quotes">
+                    <div class="card" style="margin-bottom: 10px;" v-for="thisItem in movieQuotes">
+                        <div class="card-body">
+                            <div class="blockquote mb-0">
+                                <p>{{thisItem.quote}}</p>
+                            </div>
+                            <footer class="blockquote-footer">
+                                {{thisItem.movie}}
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript">
+        const myApp = Vue.createApp({
+            data: function () {
+                return {
+                    theName: "Alexander",
+                    quoteInput: "",
+                    movieInput: "",
+                    movieQuotes: [],
+                }
+            },
+            methods: {
+                printGreeting() {
+                    return "Greetings! Enter in a movie";
+                },
+                addMovieQuote() {
+                    this.movieQuotes.unshift({ //prepend the elements in the array so that you dont have to scroll down to the bottom every time as you type in quotes.
+                        quote: this.quoteInput,
+                        movie: this.movieInput,
+                    });
+                    console.log('Quotes so far... ', this.movieQuotes);
+                    this.quoteInput = "";
+                    this.movieInput = "";
+                }
+            }
+        });
+        myApp.mount('#app');
+
+        //function addQuote() {
+
+        // var quote = document.getElementById("quote-input").value;
+        // var movie = document.querySelector("#movie-input").value;
+
+        // var myParagraph = document.createElement("p");
+        // myParagraph.innerText = quote;
+        // var myFooter = document.createElement("footer");
+        // myFooter.setAttribute("class", "blockquote-footer");
+        // myFooter.innerText = movie;
+
+        // var blockQuote = document.createElement("div");
+        // blockQuote.setAttribute("class", "blockquote mb-0");
+
+        // blockQuote.appendChild(myParagraph);
+        // blockQuote.appendChild(myFooter);
+
+        // var cardBody = document.createElement("div");
+        // cardBody.setAttribute("class", "card-body");
+        // cardBody.appendChild(blockQuote);
+
+        // var card = document.createElement("div");
+        // card.setAttribute("class", "card");
+        // card.appendChild(cardBody);
+        // card.style.marginBottom = "10px";
+
+        // document.getElementById("quotes").prepend(card);
+
+        // document.getElementById("quote-input").value = "";
+        // document.querySelector("#movie-input").value = "";
+        //}
+    </script>
+</body>
+
+</html>
